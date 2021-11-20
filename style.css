@@ -1,0 +1,44 @@
+body{
+    font-family: cursive;
+    width: 600px;
+    margin: 0 auto;
+    padding: 0 20px 20px 20px;
+    background-color: rgb(235, 216, 183);
+}
+p{
+    text-align: center;
+    text-align: justify;
+}
+pre code {
+    background-color: rgb(161, 147, 147);
+    border: 1px solid #999;
+    display: block;
+    padding: 20px;
+    color: blue;
+  }
+  h1{
+      color: rgb(153, 187, 173);
+      text-decoration: underline;
+  }
+  .bold{
+      font-weight: bold;
+  }
+  .underline{
+      text-decoration: underline;
+  }
+  h3{
+      color: rgb(153, 187, 173);
+      font-style: italic;
+      font-weight: bold;
+      text-decoration: underline;
+  }
+  table,th,td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: fit-content;
+  }
+  code{
+      color: rgb(255, 0, 0);
+      background-color: rgb(240, 229, 215);
+  }
+  

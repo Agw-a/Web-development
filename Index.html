@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>What is CSS</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+      <h1>What is CSS?</h1>
+      <p>
+        CSS ( <span class="bold underline">C</span>ascading <span class="bold underline">S</span>tyle <span class="bold underline">S</span>heets ) is a style sheet language used to style  HTML elements. It describes the presantation of web pages
+        including colors, layout and fonts. For example the  CSS code below styles paragraphs to color red while the body's background color is white.
+        <pre>
+            <code>
+              p { color: red; }
+              body { background-color: white; }
+            </code>
+        </pre>
+      </p>
+      <h1>Anatomy of CSS ruleset</h1>
+      <p>
+          This section disects the anatomy of CSS. Considering the CSS code above, a CSS ruleset  comprises
+          a selector, declaration, propoerties and property value as in the image below.
+          <br>
+          <br>
+
+          <img src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics/css-declaration-small.png" alt="Anatomy of CSS ruleset"width="500">
+          <h3>Selector</h3>
+          <p>
+             <strong>"p"</strong> is a selector in CSS. The selector is the name at the start  of a rule-set defining the HTML element that is to be styled .
+          </p>
+          <h3>Declaration</h3>
+          <p>
+            A declaration is a single rule that defines the properties you want to style e.g <strong>"color red".</strong>  
+          </p>
+          <h3>Property</h3>
+          <p>
+           The desired way of styling a HTML Document e.g <strong>"color"</strong>  is a property of <strong>"p".</strong>
+          </p>
+          <h3>Property value</h3>
+          <p>
+            This defines the specific way of defining the property e.g <strong>"red"</strong> is the value of the property <strong>"color".</strong> 
+          </p>
+          <br>
+            <strong>NOTE:</strong> 
+          <ul>
+              <li>Each rule-set must be wrapped in curly braces {}</li>
+              <li>With each declaration, use a colon (:) to separate the property from the values. </li>
+              <li>Use a semi-colon (;) to separate each declaration from the nest one i.e. 
+                <pre>
+                    <code>
+                        p {
+                            color: red;
+                            width: 500px;
+                            border: 1px solid black;
+                            }
+                    </code>
+                </pre>   
+            </li>
+            <li>
+                You can select multiple HTML elements to be defined/styled and separate each of them by a comma e.g
+                <pre>
+                    <code>
+                        p, li, h1 {
+                            color: red;
+                          }
+                    </code>
+                </pre>
+
+            </li>
+
+          </ul>
+
+          
+
+      </p>
+      <h1>CSS selectors</h1>
+      <p> CSS selectors find the specific HTML element to be syled.These selectors include the following;
+          <ul>
+              <li>Element selector</li>
+              <li> ID selector</li>
+              <li>Class selector</li>
+              <li>Pseodo selector</li>
+              <li>Universal selector</li>
+              <li>Grouping selector</li>
+          </ul>
+          <table>
+            <tr>
+              <th>Selector</th>
+              <th>Purpose</th>
+              <th>Example</th>
+            </tr>
+            <tr>
+              <td>Element Selector</td>
+              <td>All HTML of the specific tag or the element name.</td>
+              <td>
+                  Here, all <strong>"p"</strong> elements on the page will be
+                   center-aligned, with a red text color: 
+                   <br>
+                   <code>p
+                    { text-align: center; color: red;
+                    }  </code>
+                    <br>
+                </td>
+            </tr>
+            <tr>
+              <td>ID Selectors</td>
+              <td>The elements on a page with a specified ID. Each HTML element has a unique ID that can be traced in CSS. To select an element with a specific id, write a hash  <strong>(#)</strong> character, followed by
+                the id of the element. </td>
+              <td> The CSS rule below would be applied to  HTML elements of <strong>"id=indent-line"</strong> 
+                <br>
+                <code>#indent-line
+                { text-align: center; color: red;</code>  </td>
+            </tr>
+            <tr>
+              <td>Class Selector</td>
+              <td>Elements of  a HTML page with the same class/ specific class attribute. To select elements with a specific class, write a period <strong>(.)</strong>  character, followed by the class name.</td>
+              <td> HTML element <strong> class="my-class"</strong> would be selected with the CSS selector below;
+                <br>
+                <code>.my-class
+                  { text-align: center; color: red;</code>
+              </td>
+            </tr>
+            <tr>
+              <td>Pseudo selector</td>
+              <td>For the specified elements but only when in a given state. e.g only when cursor hovers over the text.</td>
+              <td><code>a:hover</code><br>
+                selects <strong>"a"</strong> but only when the mouse pointer is hovering over the link</td>
+            </tr>
+            <tr>
+              <td>Universal selector</td>
+              <td>Selects all the HTML elements in the page</td>
+              <td><code>*{ text-align: center; color: blue;
+              }</code></td>
+            </tr>
+            <tr>
+              <td>Grouping selector</td>
+              <td>Applied if  HTML elements e.g h1, h2, and p have the same definitions e.g color red and centered text alignment, a grouping selector is applied to reduce the bulk of code.</td>
+              <td><code>h1, h2, p
+                {
+                text-align: center; color: red;}</code></td>
+            </tr>
+          </table> 
+      </p>
+      <h1>Font and text</h1>
+      <p> 
+        The following are among the text and font styling options available in CSS;
+        <ul>
+          <li>Font family</li>
+          <li>Font size</li>
+          <li> Line spacing</li>
+          <li>Text allignment</li>
+        </ul>
+      </p>
+      <h1>CSS Box Model</h1>
+      <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--mDEzmZQ9--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/iwkjpm93cri86dxj19gb.png" alt="Boxes in CSS"width="500">
+      <p>
+        This is the box that wraps around the HTML elements.
+        <br>
+        <ul>
+          <li><strong>Content-</strong> where text and images appear in the webpage.</li>
+          <li><strong>Padding-</strong>The spacxe around elements.</li> 
+          <li><strong>Border-</strong>Solod outline that goes around the padding.</li>
+          <li><strong>Margin-</strong>The space outside the border.</li> 
+        </ul>
+      </p>
+      Still curious about CSS? Check out the following websites for more resources;
+      <a target="-blank"href="https://www.youtube.com/watch?v=1Rs2ND1ryYc">CSS for beginners</a>
+      and <a target="-blank"href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics#anatomy_of_a_css_ruleset">CSS basics</a> which was the main reference material for this article on CSS.
+    
+  </body>
+</html>
